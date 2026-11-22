@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "spawnnotifyclient",
+  "version": "${version}",
+  "name": "Spawn Notification Client",
+  "description": "Client-side alerts for shiny, legendary, mythical, Ultra Beast and Paradox Cobblemon that load near you. Works on any server; nothing to install server-side.",
+  "authors": [
+    "Spawn Notification Client contributors"
+  ],
+  "contact": {
+    "sources": "https://github.com/your-name/spawn-notification-client"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.spawnnotifyclient.SpawnNotifyClient"
+    ],
+    "modmenu": [
+      "io.github.spawnnotifyclient.client.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "cobblemon": ">=1.8.0"
+  },
+  "recommends": {
+    "modmenu": "*"
+  }
+}

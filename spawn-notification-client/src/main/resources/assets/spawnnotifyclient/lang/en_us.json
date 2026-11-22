@@ -1,0 +1,53 @@
+{
+  "key.spawnnotifyclient.open_config": "Open Spawn Notification settings",
+  "key.categories.spawnnotifyclient": "Spawn Notification Client",
+
+  "spawnnotifyclient.prefix": "Spawn",
+  "spawnnotifyclient.alert.spotted": "%1$s %2$s spotted%3$s!",
+  "spawnnotifyclient.alert.at": " at %1$s, %2$s, %3$s",
+  "spawnnotifyclient.alert.away": " (%1$s blocks away)",
+  "spawnnotifyclient.error.disabled": "§c[Spawn Notification Client] Too many errors reading Pokémon data (unsupported Cobblemon version?). Detection is paused until you reconnect. See latest.log.",
+
+  "spawnnotifyclient.category.shiny": "Shiny",
+  "spawnnotifyclient.category.legendary": "Legendary",
+  "spawnnotifyclient.category.mythical": "Mythical",
+  "spawnnotifyclient.category.ultra_beast": "Ultra Beast",
+  "spawnnotifyclient.category.paradox": "Paradox",
+  "spawnnotifyclient.category.custom": "Watched",
+
+  "spawnnotifyclient.command.enabled": "Spawn Notification Client: alerts enabled.",
+  "spawnnotifyclient.command.disabled": "Spawn Notification Client: alerts disabled.",
+  "spawnnotifyclient.command.reloaded": "Spawn Notification Client: config reloaded.",
+
+  "spawnnotifyclient.config.title": "Spawn Notification Client",
+  "spawnnotifyclient.config.page.0": "Alerts",
+  "spawnnotifyclient.config.page.1": "Output & sound",
+  "spawnnotifyclient.config.page.2": "Species & label filters",
+  "spawnnotifyclient.config.page.3": "Cooldowns & range",
+
+  "spawnnotifyclient.config.enabled": "Enabled",
+  "spawnnotifyclient.config.ignore_owned": "Ignore owned",
+  "spawnnotifyclient.config.shiny": "Shiny",
+  "spawnnotifyclient.config.legendary": "Legendary",
+  "spawnnotifyclient.config.mythical": "Mythical",
+  "spawnnotifyclient.config.ultra_beast": "Ultra Beast",
+  "spawnnotifyclient.config.paradox": "Paradox",
+
+  "spawnnotifyclient.config.visual": "On-screen",
+  "spawnnotifyclient.config.chat": "Chat",
+  "spawnnotifyclient.config.coords": "Coordinates",
+  "spawnnotifyclient.config.distance": "Distance",
+  "spawnnotifyclient.config.sound": "Sound",
+  "spawnnotifyclient.config.volume": "Volume: %1$s%%",
+  "spawnnotifyclient.config.duration": "Banner duration (seconds)",
+  "spawnnotifyclient.config.test": "Test alert",
+
+  "spawnnotifyclient.config.whitelist": "Always alert for these species (comma separated)",
+  "spawnnotifyclient.config.blacklist": "Never alert for these species (comma separated)",
+  "spawnnotifyclient.config.extra_labels": "Extra Cobblemon labels to alert on (e.g. restricted)",
+
+  "spawnnotifyclient.config.species_cooldown": "Per-species cooldown (s)",
+  "spawnnotifyclient.config.sound_cooldown": "Sound cooldown (s)",
+  "spawnnotifyclient.config.max_distance": "Max distance (0 = any)",
+  "spawnnotifyclient.config.shiny_bypass": "Shiny ignores cooldowns"
+}

@@ -1,0 +1,63 @@
+plugins {
+	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		name = 'ImpactDev (Cobblemon)'
+		url = 'https://maven.impactdev.net/repository/development/'
+	}
+	maven {
+		name = 'TerraformersMC (Mod Menu)'
+		url = 'https://maven.terraformersmc.com/releases/'
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.officialMojangMappings()
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+	// Compile-only: Cobblemon is supplied by the player at runtime. transitive=false so we
+	// do not drag Cobblemon's own dependency tree into this build.
+	modCompileOnly("com.cobblemon:fabric:${project.cobblemon_version}") {
+		transitive = false
+	}
+	// Cobblemon is written in Kotlin; javac needs the stdlib to read its class files.
+	compileOnly "org.jetbrains.kotlin:kotlin-stdlib:${project.kotlin_version}"
+	// Optional settings-button integration; only loaded if Mod Menu is installed.
+	modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+}
+
+processResources {
+	inputs.property 'version', project.version
+	filesMatching('fabric.mod.json') {
+		expand 'version': project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+	it.options.encoding = 'UTF-8'
+}
+
+java {
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+	from('LICENSE') {
+		rename { "${it}_${project.base.archivesName.get()}" }
+	}
+}
